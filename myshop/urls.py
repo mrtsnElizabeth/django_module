@@ -14,8 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from myshop.shop.views import signup as core_views
+from shop import views as core_views
 
 urlpatterns = [
-    url(r'^signup/$', core_views.signup, name='signup'),
+    url('signup/', core_views.signup, name='signup'),
 ]
